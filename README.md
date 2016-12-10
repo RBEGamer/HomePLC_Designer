@@ -31,3 +31,6 @@ A sample nodes list is located at `documentation/sample_node_list/Implmented Nod
 ###  SAMPLE CONFIG WITH PARAMETER EDITOR
 ![Gopher image](/documentation/screenshots/screen_sample_schem_param.png)
 
+
+# BUGS
+* The bezier curve for the node lines is a little bit wired
