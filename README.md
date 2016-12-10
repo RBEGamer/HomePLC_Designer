@@ -1,7 +1,14 @@
 # HomePLC_Commander
 The node flow diagramm creator for the HomePLC System
 
+# FEATURES
 
+# USAGE
+## LOAD NODES
+## BUILD SCHEMATIC
+## EXPORT SCHEMATIC
+
+# CREATE OWN NODES
 
 
 
