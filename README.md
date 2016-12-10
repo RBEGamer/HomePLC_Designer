@@ -7,8 +7,16 @@ The node flow diagramm creator for the HomePLC System
 * SIMPLE XML EXPORT FORMAT TO USE IT IN YOUR OWN PROJECTS
 
 
+# A NODE
+
+
 # USAGE
 ## LOAD NODES
+A list of avriable nodes in your system must be loaded at startup of the software.
+The nodes list is a simple CSV File that contains all needes information about each node.
+So at startup you have to load the file with the UI-Button.
+A sample nodes list is located at `documentation/sample_node_list/Implmented Nodes.csv`
+
 ## BUILD SCHEMATIC
 ## EXPORT SCHEMATIC
 
