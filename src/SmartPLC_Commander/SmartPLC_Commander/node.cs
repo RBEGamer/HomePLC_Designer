@@ -414,7 +414,9 @@ namespace SmartPLC_Commander
                 if (base_rect.IntersectsWith(view_rect))
                 {
                     //DRAW BACKGROUND RECT
-                    g.DrawRectangle(new Pen(Color.Green), base_rect);
+                   // g.DrawRectangle(new Pen(Color.Green), base_rect);
+					//FILLED
+					g.FillRectangle(new SolidBrush(Color.White), base_rect);
                     //DRAW HEADLINE
                     if (title != "")
                     {
@@ -426,7 +428,9 @@ namespace SmartPLC_Commander
                     {
                         if (view_rect.IntersectsWith(connections[i].drawable_rect))
                         {
-                            g.DrawRectangle(new Pen(connections[i].con_color), connections[i].drawable_rect);
+                        //    g.DrawRectangle(new Pen(connections[i].con_color), connections[i].drawable_rect);
+							//FILLED HERE
+							g.FillRectangle(new SolidBrush(connections[i].con_color), connections[i].drawable_rect);
                         }
                          if (connections[i].description != "" || view_rect.IntersectsWith(connections[i].text_rect))
                             {

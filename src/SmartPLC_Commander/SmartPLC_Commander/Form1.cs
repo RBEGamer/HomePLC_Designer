@@ -533,7 +533,8 @@ namespace SmartPLC_Commander
                     }
 
                     //NACH TYP
-                    graphics.DrawBezier(new Pen(connection_list[j].source.con_color, 5.0f), point_source, new Point(point_middle.X, point_source.Y), new Point(point_middle.X, point_target.Y), point_target); 
+                   // graphics.DrawBezier(new Pen(connection_list[j].source.con_color, 5.0f), point_source, new Point(point_middle.X, point_source.Y), new Point(point_middle.X, point_target.Y), point_target); 
+					graphics.DrawLine(new Pen(connection_list[j].source.con_color, 5.0f),point_source,point_target);
                 }
 
 
