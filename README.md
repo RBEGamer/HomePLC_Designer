@@ -33,4 +33,4 @@ A sample nodes list is located at `documentation/sample_node_list/Implmented Nod
 
 
 # BUGS
-* The bezier curve for the node lines is a little bit wired
+* The bezier curve for the node lines is a little bit wired (FIXED IN 9b69E88)
