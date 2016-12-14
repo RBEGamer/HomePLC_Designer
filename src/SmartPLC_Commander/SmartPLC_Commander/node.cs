@@ -410,18 +410,21 @@ namespace SmartPLC_Commander
             if (clipping_recht.IntersectsWith(view_rect))
             {
 
-                //BASIC CLIPPING
-                if (base_rect.IntersectsWith(view_rect))
-                {
-                    //DRAW BACKGROUND RECT
-                   // g.DrawRectangle(new Pen(Color.Green), base_rect);
+				//BASIC CLIPPING
+				if (base_rect.IntersectsWith(view_rect))
+				{
+					//DRAW BACKGROUND RECT
+					// g.DrawRectangle(new Pen(Color.Green), base_rect);
 					//FILLED
 					g.FillRectangle(new SolidBrush(Color.White), base_rect);
-                    //DRAW HEADLINE
-                    if (title != "")
-                    {
-                        g.DrawString(title, text_font, Brushes.Black, headline_rect);
-                    }
+					//DRAW HEADLINE
+					if (title != "")
+					{
+						g.DrawString(title, text_font, Brushes.Black, headline_rect);
+					}
+					else { 
+						g.DrawString("<UNKOWN NODE>", text_font, Brushes.Black, headline_rect);
+					}
 
                     //DRAWW ALL I/O CONNECTIONS
                     for (int i = 0; i < connections.Count; i++)
