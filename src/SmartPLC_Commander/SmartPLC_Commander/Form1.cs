@@ -122,9 +122,8 @@ namespace SmartPLC_Commander
                         tnode.output_con_string = splitted_content[11];
                         tnode.input_con_string = splitted_content[10];
                         tnode.extention_name = splitted_content[9];
-
-
                         tnode.class_name = splitted_content[0];
+
 
                         if (splitted_content[4].ToLower().Contains("true"))
                         {
@@ -185,9 +184,6 @@ namespace SmartPLC_Commander
                         tnode.idnr = i;
                         tnode.extention_name = splitted_content[9];
                         loaded_nodes.Add(tnode);
-
-
-
                     }
                 }
                 catch (Exception)
@@ -226,10 +222,7 @@ namespace SmartPLC_Commander
                     final_string += "<node nid=\"" + n.nid + "\" nsi=\"" + n.xml_name + "\" ncon=\"" + constring_tmp + "\" nparam=\"" + n.param_string + "\" pos=\"" + n.pos.x.ToString() + ";" + n.pos.y.ToString() + "\" use_timer=\"" + n.use_timer.ToString().ToLower() + "\" is_static=\"" + n.is_static.ToString().ToLower() + "\" is_lua_node=\"" + n.is_lua_node.ToString().ToLower() + "\" use_serial=\"" + n.use_serial.ToString().ToLower() + "\" requires_extention=\"" + n.requires_extention.ToString().ToLower() + "\" extention_name=\"" + n.extention_name + "\" pass_through=\"" + n.pass_though.ToString().ToLower() + "\" class_name=\"" + n.class_name + "\" />";
               
                 }
-                final_string += "</schematic>";
-           
-
-
+				final_string += "</schematic>";
             }
           
 
@@ -261,10 +254,6 @@ namespace SmartPLC_Commander
                     sw.Close();
                 }
             }
-            //  MessageBox.Show(final_string);
-
-    
-
         }
         //LOAD ADDItION NODE CONFIG
         private void loadAdditionalNodeConfigurationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -280,13 +269,7 @@ namespace SmartPLC_Commander
                 try
                 {
                     string[] lines = System.IO.File.ReadAllLines(openFileDialog1.FileName);
-                    // treeView1.BeginUpdate();
-                    // treeView1.Nodes.Clear();
-                    //treeView1.EndUpdate();
 
-                    //loaded_nodes.Clear();
-                    //begin loading nodes to tree view
-                    //the 1 to skip the headline
                     for (int i = 1; i < lines.Length; i++)
                     {
                         string sel_line = lines[i];
@@ -382,13 +365,7 @@ namespace SmartPLC_Commander
 
                         tnode.idnr = i;
                         loaded_nodes.Add(tnode);
-
-
-
                     }
-
-
-
                 }
                 catch (Exception)
                 {
@@ -432,13 +409,9 @@ namespace SmartPLC_Commander
                     tmnode.use_timer = loaded_nodes[i].use_timer;
                     tmnode.use_serial = loaded_nodes[i].use_serial;
                     tmnode.is_lua_node = loaded_nodes[i].is_lua_node;
-
                     tmnode.requires_extention = loaded_nodes[i].requires_extention;
                     tmnode.pass_though = loaded_nodes[i].pass_though;
                     tmnode.class_name = loaded_nodes[i].class_name;
-
-
-
                     tmnode.idnr = loaded_nodes[i].idnr;
                     tmnode.xml_name = loaded_nodes[i].xml_name;
                     tmnode.title = loaded_nodes[i].title;
@@ -485,8 +458,6 @@ namespace SmartPLC_Commander
                     schematic_nodes.Remove(schematic_nodes[i]);
                 }
             }
-
-
             selected_history_tree_node = null;
         }
         //DRAWING TIMER
@@ -540,8 +511,6 @@ namespace SmartPLC_Commander
 
 
             }
-
-
             //DRAW IMAGE
             pictureBox1.Image = drawing_bitmap;
 

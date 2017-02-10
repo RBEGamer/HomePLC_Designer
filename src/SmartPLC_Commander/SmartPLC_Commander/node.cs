@@ -254,31 +254,14 @@ namespace SmartPLC_Commander
                     parameter_panel.Controls.Add(tnud);
                 } else if (split_construct[1] == "bool" && split_construct.Length == 3)
                 {
-
-
                     CheckBox tchbx = new CheckBox();
                     tchbx.Name = "param_" + param_id.ToString();
                     tchbx.Location = new Point(70, 20 + (40 * param_id));
                     tchbx.Enabled = true;
                     parameter_panel.Controls.Add(tchbx);
-
-               
                 }
-
-
-
-
-
-
-                //bool checkbox
-
-
-
             }
-
-
             load_parameters(ref parameter_panel);
-
         }
 
 
@@ -286,46 +269,33 @@ namespace SmartPLC_Commander
 
         public void load_parameters(ref Panel param_panel)
         {
-
             if (param_string == "" || !param_string.Contains("%")) { return; }
              string[] split_param = param_string.Split('%');
             for (int i = 0; i < split_param.Length; i++)
             {
                 if (param_panel.Controls["param_" + i.ToString()] != null)
                 {
-
                     //TYPE DIFFERENT
                     param_panel.Controls["param_" + i.ToString()].Text = split_param[i];
-
-
-
                 }
-
             }
-
-
-
             //wenn string != ""
             //durchsteppen und in die boxen schreiben
-
         }
 
         public void save_parameters(ref Panel param_panel)
         {
             param_string = "";
-
             for (int i = 0; i < param_panel.Controls.Count; i++)
             {
                 ///LABELS ENTFEREN
                 if (param_panel.Controls[i].Name.Contains("param_")) {
                     param_string += param_panel.Controls[i].Text + "%";
                 }
-
             }
             if (param_string == "") {
                 param_string = "%";
             }
-
         }
 
 
@@ -334,9 +304,6 @@ namespace SmartPLC_Commander
         public void create_connection_list()
         {
             connections.Clear();
-
-
-
             {
                 if (input_con_string != "")
                 {
@@ -366,10 +333,6 @@ namespace SmartPLC_Commander
                     }
                 }
             }
-
-
-
-
 
 
 
@@ -446,10 +409,6 @@ namespace SmartPLC_Commander
 
             }
         }
-        
-    
-
-
         //FOR RECT WIDTH
         public int distance_betewenn_con_text = 20; //defult: *3
         private int distance_between_border_and_inputtext_end = 20;
@@ -458,7 +417,6 @@ namespace SmartPLC_Commander
         //FOR RECT HEIGHT
         public  int headline_text_distance = 20; //default: *3
         public int distance_between_connections = 20;
-
         private int connection_rect_widht = 15;
         private int connection_rect_height = 15;
         public void create_drawable()
@@ -549,11 +507,6 @@ namespace SmartPLC_Commander
                     output_con_amount++;
                 }
             }
-
-            //calc the headline recht
-
-            //calc the con desc rects
-
 
         }
         public void calc_element_positions()
