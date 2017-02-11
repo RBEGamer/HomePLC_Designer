@@ -1,6 +1,6 @@
-# HomePLC_Commander
+# HomePLC Designer
 The node flow diagramm creator for the HomePLC System
-
+https://github.com/RBEGamer/HomePLC
 # FEATURES
 * SIMPLE AND CLEAN INTERFACE
 * EASY WAY TO CREATE OWN NODES AND DATATYPES
