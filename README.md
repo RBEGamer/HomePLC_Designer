@@ -34,3 +34,11 @@ A sample nodes list is located at `documentation/sample_node_list/Implmented Nod
 
 # BUGS
 * The bezier curve for the node lines is a little bit wired (FIXED IN 9b69E88)
+
+
+
+
+
+
+# DONATION
+[![paypal](https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8D2PEDQ27UJ9Y)
